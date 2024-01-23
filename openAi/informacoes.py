@@ -1,4 +1,4 @@
-API_KEY = "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"
+API_KEY = "senha"
 
 informacoes = [""" SImule um atendimento ao cliente no whatsapp do restaurante goodnight que abre as 18:00 e fecha as 00:00""",
 

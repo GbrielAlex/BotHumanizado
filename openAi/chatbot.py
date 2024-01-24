@@ -9,15 +9,17 @@ openai.api_key = chave_api
 assistant_gpt = informacoes.informacoes
 
 
-def enviar_mensagem(mensagem, lista_mensagens=[{"role": "assistant", "content": assistant_gpt[0]},
-                                               {"role": "assistant",
-                                                   "content": assistant_gpt[1]},
-                                               {"role": "assistant",
-                                                   "content": assistant_gpt[2]},
-                                               {"role": "assistant",
-                                                   "content": assistant_gpt[3]}
-                                               ]):
+def enviar_mensagem(mensagem, lista_mensagens=None):
 
+    if lista_mensagens is None:
+        lista_mensagens = [{"role": "assistant", "content": assistant_gpt[0]},
+                           {"role": "assistant",
+                            "content": assistant_gpt[1]},
+                           {"role": "assistant",
+                            "content": assistant_gpt[2]},
+                           {"role": "assistant",
+                            "content": assistant_gpt[3]}
+                           ]
     lista_mensagens.append(
         {"role": "user", "content": mensagem}
     )
